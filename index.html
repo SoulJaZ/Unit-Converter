@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit Converter</title>
+</head>
+<body>
+    <div class="encabezado">
+        <h1>Unit Converter</h1>
+        <p>Por favor seleccionar la unidad de medida que desea convertir. </p>
+    </div>
+    <div class="contenedor-botones">
+        <button id="btnLongitud">Longitud</button>
+        <button>Peso</button>
+        <button>Temperatura</button>
+    </div>
+
+    <!--Modal-->
+    <div class="modal" id="modalLongitud">
+        <div class="contenido-modal">
+            <span class="close">&times;</span>
+            <h5>Longitud</h5>
+            <label for="">ingrese la longitud para convertir</label>
+            <input type="number" name="entradaLongitud" id="longitudParaConvertir" min="0">
+            <label for="">Unidad para convertir de:</label>
+            <input type="number" name="entradaUnidadDe" id="deUnida" min="0">
+            <label for="">Unidad para convertir para: </label>
+            <input type="number" name="entradaUnidadPara" id="paraUnidad" min="0">
+
+            <button type="submit">Convetir</button>
+        </div>
+
+    </div>
+    
+</body>
+<script src="converter.js"></script>
+</html>
