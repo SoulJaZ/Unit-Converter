@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,112 +7,117 @@
     <title>Unit Converter</title>
 </head>
 <body>
-    <div class="encabezado">
+
+    <header class="encabezado">
         <h1>Unit Converter</h1>
-        <p>Por favor seleccionar la unidad de medida que desea convertir. </p>
-    </div>
-    <div class="contenedor-botones">
+        <p>Seleccione la unidad de medida que desea convertir:</p>
+    </header>
+
+    <main class="contenedor-botones">
         <button id="btnLongitud">Longitud</button>
         <button id="btnPeso">Peso</button>
         <button id="btnTemperatura">Temperatura</button>
-    </div>
+    </main>
 
-    <!--Modal-->
+    <!-- Modal Longitud -->
     <div class="modal" id="modalLongitud">
         <div class="contenido-modal">
-            <span class="close">&times;</span>
+            <span class="close" data-modal="modalLongitud">&times;</span>
             <h5>Longitud</h5>
-            <p for="">Ingrese la longitud para convertir</p>
-            <input type="number" name="entradaLongitud" id="longitudParaConvertir" min="0">
-            <p for="">Unidad para convertir de:</p>
-            <select name="entradaUnidadDe" id="deUnidad">
-                <option value="defecto">Seleccione una opción</option>
-                <option value="milimetro">Milimetro</option>
-                <option value="centimetro">Centimetro</option>
-                <option value="metro">Metro</option>
-                <option value="kilometro">Kilometro</option>
-                <option value="pulgada">Pulgada</option>
-                <option value="pie">Pie</option>
-                <option value="yarda">Yarda</option>
-                <option value="milla">Milla</option>
-            </select>
-            <p for="">Unidad para convertir para: </p>
-            <select name="entradaUnidadPara" id="paraUnidad">
-                <option value="defecto">Seleccione una opción</option>
-                <option value="milimetro">Milimetro</option>
-                <option value="centimetro">Centimetro</option>
-                <option value="metro">Metro</option>
-                <option value="kilométro">Kilometro</option>
-                <option value="pulgada">Pulgada</option>
-                <option value="pie">Pie</option>
-                <option value="yarda">Yarda</option>
-                <option value="milla">Milla</option>
-            </select>
-
-            <button type="submit">Convertir</button>
-        </div>
-
-        <p id="resultadoLongitud"></p>
-    </div>
-
-    <!--Modal Peso-->
-    <div class="modalP" id="modalPeso">
-        <div class="contenido-modal">
-            <span class="close">&times;</span>
-            <h5>Peso</h5>
-            <p for="">Ingrese el peso para convertir</p>
-            <input type="number" name="entradaPeso" id="pesoParaConvertir" min="0">
-            <p for="">Unidad para convertir de:</p>
-            <select name="entradaUnidadPesoDe" id="deUnidadPeso">
-                <option value="defecto">Seleccione una opción</option>
-                <option value="gramo">Gramo</option>
-                <option value="kilogramo">Kilogramo</option>
-                <option value="onza">Onza</option>
-                <option value="libra">Libra</option>
-            </select>
-            <p for="">Unidad para convertir para</p>
-            <select name="entradaUnidadPesoPara" id="paraUnidadPeso">
-                <option value="defecto">Seleccione una opción</option>
-                <option value="gramo">Gramo</option>
-                <option value="kilogramo">Kilogramo</option>
-                <option value="onza">Onza</option>
-                <option value="libra">Libra</option>
-            </select>
+            <p>Ingrese la longitud a convertir:</p>
+            <input type="number" id="longitudParaConvertir" min="0" placeholder="Ej: 10">
             
-            <button type="submit">Convertir</button>
-        </div>
+            <p>Unidad actual:</p>
+            <select id="deUnidadLongitud">
+                <option value="defecto">Seleccione una opción</option>
+                <option value="milimetro">Milímetro</option>
+                <option value="centimetro">Centímetro</option>
+                <option value="metro">Metro</option>
+                <option value="kilometro">Kilómetro</option>
+                <option value="pulgada">Pulgada</option>
+                <option value="pie">Pie</option>
+                <option value="yarda">Yarda</option>
+                <option value="milla">Milla</option>
+            </select>
 
-        <p id="resultadoPeso"></p>
+            <p>Convertir a:</p>
+            <select id="paraUnidadLongitud">
+                <option value="defecto">Seleccione una opción</option>
+                <option value="milimetro">Milímetro</option>
+                <option value="centimetro">Centímetro</option>
+                <option value="metro">Metro</option>
+                <option value="kilometro">Kilómetro</option>
+                <option value="pulgada">Pulgada</option>
+                <option value="pie">Pie</option>
+                <option value="yarda">Yarda</option>
+                <option value="milla">Milla</option>
+            </select>
+
+            <button id="convertirLongitud">Convertir</button>
+            <p id="resultadoLongitud"></p>
+        </div>
     </div>
 
-    <!--Modal Temperatura-->
-    <div class="modalT" id="modalTemperatura">
+    <!-- Modal Peso -->
+    <div class="modal" id="modalPeso">
         <div class="contenido-modal">
-            <span class="close">&times;</span>
+            <span class="close" data-modal="modalPeso">&times;</span>
+            <h5>Peso</h5>
+            <p>Ingrese el peso a convertir:</p>
+            <input type="number" id="pesoParaConvertir" min="0" placeholder="Ej: 5">
+            
+            <p>Unidad actual:</p>
+            <select id="deUnidadPeso">
+                <option value="defecto">Seleccione una opción</option>
+                <option value="gramo">Gramo</option>
+                <option value="kilogramo">Kilogramo</option>
+                <option value="onza">Onza</option>
+                <option value="libra">Libra</option>
+            </select>
+
+            <p>Convertir a:</p>
+            <select id="paraUnidadPeso">
+                <option value="defecto">Seleccione una opción</option>
+                <option value="gramo">Gramo</option>
+                <option value="kilogramo">Kilogramo</option>
+                <option value="onza">Onza</option>
+                <option value="libra">Libra</option>
+            </select>
+
+            <button id="convertirPeso">Convertir</button>
+            <p id="resultadoPeso"></p>
+        </div>
+    </div>
+
+    <!-- Modal Temperatura -->
+    <div class="modal" id="modalTemperatura">
+        <div class="contenido-modal">
+            <span class="close" data-modal="modalTemperatura">&times;</span>
             <h5>Temperatura</h5>
-            <p>Ingrese la temperatura para convertir.</p>
-            <input type="number" name="entradaTemperatura" id="temperaturaParaConvertir" min="0">
-            <p for="">Unidad para convertir de:</p>
+            <p>Ingrese la temperatura a convertir:</p>
+            <input type="number" id="temperaturaParaConvertir" placeholder="Ej: 30">
+            
+            <p>Unidad actual:</p>
             <select id="deUnidadTemperatura">
                 <option value="defecto">Seleccione una opción</option>
-                <option value="celcius">Celcius</option>
+                <option value="celsius">Celsius</option>
                 <option value="fahrenheit">Fahrenheit</option>
                 <option value="kelvin">Kelvin</option>
             </select>
-            <p for="">Unidad para convertir para</p>
+
+            <p>Convertir a:</p>
             <select id="paraUnidadTemperatura">
                 <option value="defecto">Seleccione una opción</option>
-                <option value="celcius">Celcius</option>
+                <option value="celsius">Celsius</option>
                 <option value="fahrenheit">Fahrenheit</option>
                 <option value="kelvin">Kelvin</option>
             </select>
-            
-            <button type="submit">Convetir</button>
-        </div>
 
-        <p id="resultadoTemperatura"></p>
+            <button id="convertirTemperatura">Convertir</button>
+            <p id="resultadoTemperatura"></p>
+        </div>
     </div>
-    
+
+    <script src="converter.js"></script>
 </body>
-<script src="converter.js"></script>
 </html>
