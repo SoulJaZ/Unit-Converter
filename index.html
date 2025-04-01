@@ -13,7 +13,7 @@
     </div>
     <div class="contenedor-botones">
         <button id="btnLongitud">Longitud</button>
-        <button>Peso</button>
+        <button id="btnPeso">Peso</button>
         <button>Temperatura</button>
     </div>
 
@@ -22,16 +22,45 @@
         <div class="contenido-modal">
             <span class="close">&times;</span>
             <h5>Longitud</h5>
-            <label for="">ingrese la longitud para convertir</label>
+            <p for="">Ingrese la longitud para convertir</p>
             <input type="number" name="entradaLongitud" id="longitudParaConvertir" min="0">
-            <label for="">Unidad para convertir de:</label>
+            <p for="">Unidad para convertir de:</p>
             <input type="number" name="entradaUnidadDe" id="deUnida" min="0">
-            <label for="">Unidad para convertir para: </label>
+            <p for="">Unidad para convertir para: </p>
             <input type="number" name="entradaUnidadPara" id="paraUnidad" min="0">
 
             <button type="submit">Convetir</button>
         </div>
+    </div>
 
+    <!--Modal Peso-->
+    <div class="modalP" id="modalPeso">
+        <div class="contenido-modal">
+            <span class="close">&times;</span>
+            <h5>Peso</h5>
+            <p for="">Ingrese el peso para convertir</p>
+            <input type="number" name="entradaPeso" id="pesoParaConvertir" min="0">
+            <p for="">Unidad para convertir de:</p>
+            <select>
+                <option value="defecto">Seleccione una opción</option>
+                <option value="milimétro">Milimétro</option>
+                <option value="gramo">Gramo</option>
+                <option value="kilogramo">Kilogramo</option>
+                <option value="onza">Onza</option>
+                <option value="libra">Libra</option>
+            </select>
+            <p for="">Unidad para convertir para</p>
+            <select>
+                <option value="defecto">Seleccione una opción</option>
+                <option value="milimétro">Milimétro</option>
+                <option value="gramo">Gramo</option>
+                <option value="kilogramo">Kilogramo</option>
+                <option value="onza">Onza</option>
+                <option value="libra">Libra</option>
+            </select>
+            
+            <button type="submit">Convetir</button>
+        </div>
     </div>
     
 </body>
