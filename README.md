@@ -1,5 +1,5 @@
 ![status-active-success](https:https://github.com/SoulJaZ/Unit-Converter)
-![tu-repositorio](https:https://github.com/SoulJaZ/Unit-Converter/commit/9335291fee3f207922fb543307e315999a282403)
+![Unit-Converter](https:https://github.com/SoulJaZ/Unit-Converter/commit/9335291fee3f207922fb543307e315999a282403)
 
   Aplicación web para convertir entre diferentes unidades de medida: longitud, peso y temperatura.
 
