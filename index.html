@@ -14,7 +14,7 @@
     <div class="contenedor-botones">
         <button id="btnLongitud">Longitud</button>
         <button id="btnPeso">Peso</button>
-        <button>Temperatura</button>
+        <button id="btnTemperatura">Temperatura</button>
     </div>
 
     <!--Modal-->
@@ -25,12 +25,34 @@
             <p for="">Ingrese la longitud para convertir</p>
             <input type="number" name="entradaLongitud" id="longitudParaConvertir" min="0">
             <p for="">Unidad para convertir de:</p>
-            <input type="number" name="entradaUnidadDe" id="deUnida" min="0">
+            <select name="entradaUnidadDe" id="deUnidad">
+                <option value="defecto">Seleccione una opción</option>
+                <option value="milimetro">Milimetro</option>
+                <option value="centimetro">Centimetro</option>
+                <option value="metro">Metro</option>
+                <option value="kilometro">Kilometro</option>
+                <option value="pulgada">Pulgada</option>
+                <option value="pie">Pie</option>
+                <option value="yarda">Yarda</option>
+                <option value="milla">Milla</option>
+            </select>
             <p for="">Unidad para convertir para: </p>
-            <input type="number" name="entradaUnidadPara" id="paraUnidad" min="0">
+            <select name="entradaUnidadPara" id="paraUnidad">
+                <option value="defecto">Seleccione una opción</option>
+                <option value="milimetro">Milimetro</option>
+                <option value="centimetro">Centimetro</option>
+                <option value="metro">Metro</option>
+                <option value="kilométro">Kilometro</option>
+                <option value="pulgada">Pulgada</option>
+                <option value="pie">Pie</option>
+                <option value="yarda">Yarda</option>
+                <option value="milla">Milla</option>
+            </select>
 
-            <button type="submit">Convetir</button>
+            <button type="submit">Convertir</button>
         </div>
+
+        <p id="resultadoLongitud"></p>
     </div>
 
     <!--Modal Peso-->
@@ -41,26 +63,54 @@
             <p for="">Ingrese el peso para convertir</p>
             <input type="number" name="entradaPeso" id="pesoParaConvertir" min="0">
             <p for="">Unidad para convertir de:</p>
-            <select>
+            <select name="entradaUnidadPesoDe" id="deUnidadPeso">
                 <option value="defecto">Seleccione una opción</option>
-                <option value="milimétro">Milimétro</option>
                 <option value="gramo">Gramo</option>
                 <option value="kilogramo">Kilogramo</option>
                 <option value="onza">Onza</option>
                 <option value="libra">Libra</option>
             </select>
             <p for="">Unidad para convertir para</p>
-            <select>
+            <select name="entradaUnidadPesoPara" id="paraUnidadPeso">
                 <option value="defecto">Seleccione una opción</option>
-                <option value="milimétro">Milimétro</option>
                 <option value="gramo">Gramo</option>
                 <option value="kilogramo">Kilogramo</option>
                 <option value="onza">Onza</option>
                 <option value="libra">Libra</option>
             </select>
             
+            <button type="submit">Convertir</button>
+        </div>
+
+        <p id="resultadoPeso"></p>
+    </div>
+
+    <!--Modal Temperatura-->
+    <div class="modalT" id="modalTemperatura">
+        <div class="contenido-modal">
+            <span class="close">&times;</span>
+            <h5>Temperatura</h5>
+            <p>Ingrese la temperatura para convertir.</p>
+            <input type="number" name="entradaTemperatura" id="temperaturaParaConvertir" min="0">
+            <p for="">Unidad para convertir de:</p>
+            <select id="deUnidadTemperatura">
+                <option value="defecto">Seleccione una opción</option>
+                <option value="celcius">Celcius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+            </select>
+            <p for="">Unidad para convertir para</p>
+            <select id="paraUnidadTemperatura">
+                <option value="defecto">Seleccione una opción</option>
+                <option value="celcius">Celcius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+            </select>
+            
             <button type="submit">Convetir</button>
         </div>
+
+        <p id="resultadoTemperatura"></p>
     </div>
     
 </body>
